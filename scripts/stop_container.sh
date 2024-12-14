@@ -2,4 +2,4 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi"
+container_id=$(docker ps -q) && docker stop "$container_id" && docker rm "$container_id"
